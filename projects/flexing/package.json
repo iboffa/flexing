@@ -1,0 +1,15 @@
+{
+  "name": "flexing",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.1.6",
+    "@angular/core": "^10.1.6"
+  },
+  "dependencies": {
+    "chroma.ts": "^1.0.9",
+    "font-awesome": "^4.7.0",
+    "golden-layout": "^1.5.9",
+    "jquery": "^3.5.1",
+    "tslib": "^2.0.0"
+  }
+}
