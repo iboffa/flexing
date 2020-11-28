@@ -13,7 +13,6 @@ export class FlexingLayoutComponent implements OnInit {
   @Input() components: Array<WidgetConfig>;
   @Input() name: string;
   @Input() config: LayoutConfig;
-  @Input() treeCommunication: true;
   @Output() layoutRefresh = new Subject();
 
   constructor(private gls: FlexingLayoutService, public el: ElementRef) {}

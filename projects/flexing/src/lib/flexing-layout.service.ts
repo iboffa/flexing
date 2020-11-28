@@ -27,7 +27,6 @@ export class FlexingLayoutService {
   private _currentLinkingComponents: Map<string, Widget> = new Map<string, Widget>();
   private _linkColors: Map<string, Map<string, string>> = new Map<string, Map<string, string>>();
   private _layoutContainers: Map<string, HTMLElement> = new Map<string, HTMLElement>();
-  private _layoutTreeCommunicationFlags: Map<string, boolean> = new Map<string, boolean>();
   public layoutComponentRef: Map<string, FlexingLayoutComponent> = new Map<string, FlexingLayoutComponent>();
   private rd: Renderer2;
   private cancelLinkingHook: () => void;
@@ -94,7 +93,6 @@ export class FlexingLayoutService {
     this._linkColors.set(gLayout.name, new Map<string, string>());
     this._liveComponents.set(gLayout.name, new Map<string, Widget>());
     this._layoutContainers.set(gLayout.name, container);
-    this._layoutTreeCommunicationFlags.set(gLayout.name, gLayout.treeCommunication);
     this.layoutComponentRef.set(gLayout.name, gLayout);
     gLayout.components.forEach((component) => {
       this.registerWidget(component, gLayout.name, gLayout.config);
@@ -291,12 +289,12 @@ export class FlexingLayoutService {
   public startLinking(layout: string, component: Widget) {
     this._currentLinkingComponents.set(layout, component);
     this.removeLinkOverlays(layout);
-    if (!(!this._layoutTreeCommunicationFlags.get(layout) && component.getSubscribers.length > 0))
+    if (!(component.getSubscribers.length > 0))
       this._liveComponents.get(layout).forEach((c) => {
         if (
           !component.equals(c) &&
           component.canListen(c) &&
-          !(!this._layoutTreeCommunicationFlags.get(layout) && c.getSource() !== null)
+          !(c.getSource() !== null)
         ) {
           this.createLinkOverlay(layout, c, component);
         }

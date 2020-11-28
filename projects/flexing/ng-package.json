@@ -3,5 +3,13 @@
   "dest": "../../dist/flexing",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "tslib",
+    "@types/jquery",
+    "chroma.ts",
+    "font-awesome",
+    "golden-layout",
+    "jquery"
+  ]
 }

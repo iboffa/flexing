@@ -6,10 +6,10 @@ import { WidgetConfig } from '../interfaces/configuration';
 @Injectable({
   providedIn: 'root',
 })
-export class GLayoutApiService {
+export class FlexingLayoutApi {
   // private glsInstance: FlexingLayoutService;
 
-  constructor(readonly glsInstance: FlexingLayoutService) {}
+  constructor(readonly glsInstance: FlexingLayoutService) { }
 
   /**
    * Returns the state of a given layout

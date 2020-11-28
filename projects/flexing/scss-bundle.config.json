@@ -1,0 +1,6 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./src/lib/style/flexing-layout.style.scss",
+    "outFile": "../../dist/flexing-layout/flexing-layout.scss"
+  }
+}

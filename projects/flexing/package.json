@@ -6,10 +6,17 @@
     "@angular/core": "^10.1.6"
   },
   "dependencies": {
+    "@types/jquery": "^3.5.4",
     "chroma.ts": "^1.0.9",
     "font-awesome": "^4.7.0",
     "golden-layout": "^1.5.9",
     "jquery": "^3.5.1",
     "tslib": "^2.0.0"
+  },
+  "scripts": {
+    "build": "ng build --prod && npm run bundle-styles",
+    "publish": "cd ../../dist/flexing && --access public",
+    "build-publish": "npm run build && npm run publish",
+    "bundle-styles": "scss-bundle -c scss-bundle.config.json"
   }
 }

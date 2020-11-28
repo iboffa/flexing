@@ -8,4 +8,4 @@ import * as JQuery from 'jquery';
   imports: [],
   exports: [FlexingLayoutComponent, WidgetSourceDirective],
 })
-export class GlayoutModule {}
+export class FlexingModule {}
