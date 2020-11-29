@@ -6,10 +6,10 @@ Based on [Golden Layout](https://golden-layout.com/), Glayout allows to use Angu
 
 Run the command
 
-`npm run flexing`
+`npm install @iboffa/flexing`
 
 
-Import the Glayout in the main module:
+Import FlexingModule in the main module:
 `import { FlexingModule } from "flexing"`;
 
 In main module declaration, make sure to insert the Angular Components that would be hosted by the layout inside the `entryComponents` array.
