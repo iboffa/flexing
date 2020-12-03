@@ -6,7 +6,7 @@ Based on [Golden Layout](https://golden-layout.com/), Glayout allows to use Angu
 
 Run the command
 
-`npm install @iboffa/flexing`
+`npm install flexing`
 
 
 Import FlexingModule in the main module:
@@ -24,7 +24,7 @@ Example:
 <flexing-layout name="layout-name" [components]="components"></flexing-layout>
 ```
 
-`name` is needed as an id for the Glayout component
+`name` is needed as an id for the flexing layout component
 
 `components` is an array of `WidgetConfig` element (see next paragraph)
 
